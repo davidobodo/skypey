@@ -5,13 +5,23 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {store} from './store/store'
 
+const fancyLog = ()=>{
+	console.log("%c Rendered with 👉 👉 👇 ", "background: purple;color: #FFF");
+	console.log(store.getState());
+}
+
 const render = () => {
-	ReactDOM.render(<App />, document.getElementById('root'));
+
+	fancyLog();
+
+	return ReactDOM.render(<App />, document.getElementById('root'));
 }
 
 render();
 
 store.subscribe(render);
+
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
