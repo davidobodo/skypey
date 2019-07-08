@@ -1,7 +1,9 @@
-import {getMessages} from "../static-data"
+import { getMessages } from "../static-data"
 
-const messages =(state=getMessages, action)=>{
+
+const messages =(state=getMessages(10), action)=>{
 	return state
 }
 
 export default messages
+
