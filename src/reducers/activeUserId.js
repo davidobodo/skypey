@@ -1,7 +1,5 @@
-import {contacts} from "../static-data"
-
-const reducer =(state={contacts}, action)=>{
-	return state
+ const activeUserId = (state=null, action) =>{
+	return state;
 }
 
-export default reducer
+export default activeUserId
