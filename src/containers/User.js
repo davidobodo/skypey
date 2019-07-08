@@ -17,7 +17,6 @@ const User = ({user}) => {
 }
 
 const handleUserClick =({user_id})=> {
-	console.log(user_id)
 	store.dispatch(setActiveUserId(user_id));
 }
 export default User
