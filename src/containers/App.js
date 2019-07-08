@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Main from './Main'
-import Sidebar from './Sidebar'
-import {store} from './store/store'
+import Main from '../components/Main'
+import Sidebar from '../components/Sidebar'
+import {store} from '../store/store'
 import _ from 'lodash'
 
 const App = () => {
