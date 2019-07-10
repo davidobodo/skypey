@@ -1,5 +1,6 @@
 import {
 	SET_ACTIVE_USER_ID,
+	UNSET_ACTIVE_USER,
 	SET_TYPING_VALUE,
 	SEND_MESSAGE,
 	DELETE_MESSAGE,
@@ -14,6 +15,13 @@ export const setActiveUserId = (id)=>{
 		type: SET_ACTIVE_USER_ID,
 		payload:id
 	}
+}
+
+export const unsetActiveUser =(activeUserId) =>{
+	 return{
+	 	type:UNSET_ACTIVE_USER,
+	 	payload:activeUserId
+	 }
 }
 
 export const setTypingValue = (value) => {
@@ -76,3 +84,4 @@ export const details = (number,text,is_user_msg,activeUserId)=> {
 		}
 	}
 }
+

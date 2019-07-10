@@ -1,7 +1,8 @@
 import { 
 	SET_TYPING_VALUE,
 	SEND_MESSAGE,
-	EDIT_MESSAGE
+	EDIT_MESSAGE,
+	EDITED_MESSAGE
 
  } from "../constants/action-types";
 
@@ -14,6 +15,8 @@ const typing =(state = "", action) =>{
 			return "";
 		case EDIT_MESSAGE:
 				return action.payload.text;
+		case EDITED_MESSAGE:
+			return ""
 		default:
 			return state;
 		}

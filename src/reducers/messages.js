@@ -25,6 +25,10 @@ const messages =(state=getMessages(10), action)=>{
 		case DELETE_MESSAGE:
 			const messageId = action.payload.number;
 			const activeUserId =action.payload.activeUserId;
+			const myFunction=()=>{
+				document.getElementById("DelEdit").style.display="none";
+			}
+			myFunction();
 			return{
 				...state,
 				[activeUserId]: _.omit(state[activeUserId],messageId)
@@ -33,18 +37,26 @@ const messages =(state=getMessages(10), action)=>{
 			const text =action.payload.typing;
 			const id=action.payload.activeUserId;
 			const msg=action.payload.selectedMessage
+			console.log(msg)
+			const myFunction2=()=>{
+				document.getElementById("DelEdit").style.display="none";
+			}
+			myFunction2();
 			return {
 				...state,
 				[id]:{
 					...state[id],
 					[msg]:{
-						msg,
+						number:msg,
 						text: text,
 						is_user_msg:true
 					}
 				}
-
+				
 			}
+			
+
+	
 
 		
 		default:
