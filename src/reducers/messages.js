@@ -48,7 +48,7 @@ const messages =(state=getMessages(10), action)=>{
 					...state[id],
 					[msg]:{
 						number:msg,
-						text: text,
+						text: text + "(edited)",
 						is_user_msg:true
 					}
 				}

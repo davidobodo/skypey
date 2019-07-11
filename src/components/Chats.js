@@ -57,7 +57,7 @@ class Chats extends Component {
 
 const myFunction = (number,text,is_user_msg) => {
 	if (is_user_msg == true) {
-		document.getElementById("DelEdit").style.display="flex";
+		document.getElementById("DelEdit").setAttribute("style", "display: flex; ");
 		const activeUserId = store.getState().activeUserId;
 		console.log(number, activeUserId,text,is_user_msg)
 		store.dispatch(details(number,text,is_user_msg,activeUserId))
