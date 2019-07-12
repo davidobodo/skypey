@@ -41,20 +41,6 @@ const messages =(state=getMessages(10), action)=>{
 				document.getElementById("DelEdit").style.display="none";
 			}
 			myFunction2();
-			if(text.slice(-8)==="(edited)"){
-					return {
-					...state,
-					[id]:{
-						...state[id],
-						[msg]:{
-							number:msg,
-							text:text,
-							is_user_msg:true
-						}
-					}
-					
-				}
-			}else{
 					return {
 					...state,
 					[id]:{
@@ -66,14 +52,7 @@ const messages =(state=getMessages(10), action)=>{
 						}
 					}
 					
-				}
-			}
-			
-			
-
-	
-
-		
+				}	
 		default:
 			return state;
 	}
