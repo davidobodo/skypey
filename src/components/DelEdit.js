@@ -6,7 +6,7 @@ import {deleteMessage} from '../actions/action'
 
 const DelEdit= () =>{
 	const details = store.getState().details;
-	const { number,text, msg, activeUserId} = details
+	const { number,text} = details
 	return(
 		<div className="DelEdit" id="DelEdit">
 			 <button className="edit" onClick={handleEdit.bind(null,number,text)}>EDIT</button>
@@ -18,7 +18,6 @@ const DelEdit= () =>{
 
 const handleEdit = (number, text) => {
 	const {activeUserId} = store.getState().details;
-	console.log(number,text,activeUserId)
 	store.dispatch(editMessage(number,text, activeUserId))
 }
 

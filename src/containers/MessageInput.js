@@ -14,7 +14,6 @@ const MessageInput = ({value}) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		const { typing, activeUserId, selectedMessage}= state;
-		console.log(selectedMessage);
 		if(selectedMessage!==null){
 			store.dispatch(editedMessage(typing, activeUserId,selectedMessage))
 		}else(

@@ -2,9 +2,8 @@ import React, {Component} from 'react'
 import './Chats.css'
 import {store} from '../store/store'
 // import {deleteMessage} from '../actions/action'
-import {editMessage, details} from '../actions/action'
+import {details} from '../actions/action'
 import DelEdit from './DelEdit'
-import _ from 'lodash'
 
 class Chats extends Component {
 	constructor(props){
@@ -27,9 +26,6 @@ class Chats extends Component {
 
 
 	render(){
-
-
-		// console.log(this.props)
 		return(
 			<div className="Chats" ref={this.chatsRef}>
 				<DelEdit/>
@@ -43,7 +39,6 @@ class Chats extends Component {
 }
 
 	const Chat = ({message}) => {
-			// console.log(message)
 			const { text, is_user_msg, number} = message;
 			return(
 				<span className={`Chat ${is_user_msg ? "is-user-msg" : ""}`} 
@@ -56,10 +51,9 @@ class Chats extends Component {
 
 
 const myFunction = (number,text,is_user_msg) => {
-	if (is_user_msg == true) {
-		document.getElementById("DelEdit").setAttribute("style", "display: flex; ");
+	if (is_user_msg === true) {
+		document.getElementById("DelEdit").setAttribute("style", "display: flex; align-self:flex-start;");
 		const activeUserId = store.getState().activeUserId;
-		console.log(number, activeUserId,text,is_user_msg)
 		store.dispatch(details(number,text,is_user_msg,activeUserId))
 	}
 	else{

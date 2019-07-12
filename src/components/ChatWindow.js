@@ -9,7 +9,6 @@ import MessageInput from '../containers/MessageInput'
 
 const ChatWindow = ({ activeUserId }) => {
 	const state = store.getState();
-	console.log(activeUserId)
 	const activeUser = state.contacts[activeUserId];
 	const activeMsgs = state.messages[activeUserId];
 	const {typing} = state

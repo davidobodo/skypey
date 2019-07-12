@@ -37,23 +37,38 @@ const messages =(state=getMessages(10), action)=>{
 			const text =action.payload.typing;
 			const id=action.payload.activeUserId;
 			const msg=action.payload.selectedMessage
-			console.log(msg)
 			const myFunction2=()=>{
 				document.getElementById("DelEdit").style.display="none";
 			}
 			myFunction2();
-			return {
-				...state,
-				[id]:{
-					...state[id],
-					[msg]:{
-						number:msg,
-						text: text + "(edited)",
-						is_user_msg:true
+			if(text.slice(-8)==="(edited)"){
+					return {
+					...state,
+					[id]:{
+						...state[id],
+						[msg]:{
+							number:msg,
+							text:text,
+							is_user_msg:true
+						}
 					}
+					
 				}
-				
+			}else{
+					return {
+					...state,
+					[id]:{
+						...state[id],
+						[msg]:{
+							number:msg,
+							text:text + "(edited)",
+							is_user_msg:true
+						}
+					}
+					
+				}
 			}
+			
 			
 
 	

@@ -4,8 +4,7 @@ import {store} from '../store/store'
 import {unsetActiveUser} from '../actions/action'
 
 const Header = ({user, activeUserId}) => {
-	const { name, status, user_id } = user;
-	console.log(activeUserId)
+	const { name, status } = user;
 	return(
 		<header className="Header">
 			<button onClick={handleClick.bind(null, activeUserId)}>
