@@ -1,4 +1,6 @@
+//this is a new state that was created . solely for the purpose of sending credentials into the DelEdit component
 import {DETAILS_INFO} from '../constants/action-types'
+
 
 const details= (state={}, action) =>{
 	switch(action.type){

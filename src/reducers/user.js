@@ -5,3 +5,5 @@ const user =(state=generateUser(), action)=>{
 }
 
 export default user
+
+//the user is the default handler of the app. The one who communicates with the rest contacts

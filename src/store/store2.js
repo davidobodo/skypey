@@ -1,3 +1,5 @@
+// A sample of the store, just so i could really understand the whole syntax and selection that was going on
+
 const state = {
 	user : {
 		name : "Obodo David",
