@@ -27,11 +27,6 @@ const messages =(state=getMessages(10), action)=>{
 		//take it the message number and activeuserid
 			const messageId = action.payload.number;
 			const activeUserId =action.payload.activeUserId;
-		// once the delete button is clicked make DelEdit component disappear
-			const myFunction=()=>{
-				document.getElementById("DelEdit").style.display="none";
-			}
-			myFunction();
 		//run the omit lodash method on the state using the particulat activeuserid and number of message as parameters
 			return{
 				...state,
@@ -44,11 +39,6 @@ const messages =(state=getMessages(10), action)=>{
 			const id=action.payload.activeUserId;
 		// the number of the message i was editing
 			const msg=action.payload.selectedMessage
-		//disappear on being clicked
-			const myFunction2=()=>{
-				document.getElementById("DelEdit").style.display="none";
-			}
-			myFunction2();
 			//mutate state
 			//put all these info in the same number in the message array
 					return {
