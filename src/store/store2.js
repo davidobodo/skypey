@@ -15,19 +15,19 @@ const state = {
 				is_user_msg:false,
 				number:0,
 				text: "hey"
-			}
+			},
 			1 : {
 				is_user_msg:true,
 				number:1,
 				text:"hello"
 			}
-		}
+		},
 		133 : {
 			0 : {
 				is_user_msg:false,
 				number:0,
 				text: "boy"
-			}
+			},
 			1 : {
 				is_user_msg:true,
 				number:1,

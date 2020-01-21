@@ -79,12 +79,14 @@ class Chats extends Component {
 	render(){
 		const details = store.getState().details;
 		const { number,text} = details
+		console.log(this.props.messages)
+		
 		return(
 			//pass in this.chatRef into entire div to enable automatic scrolling of cha component
 			//chats has received messages as a prop from its parent component, but we want each to be rendered separately so we map
 			//we use the message number property as key(means of react identifying each component individually)
 			//we pass each message into a new component called Chat(i.e individual chat) so it can be rendered seperately
-			
+		
 			<div className="Chats" ref={this.chatsRef}>
 				<DelEdit 
 					show={this.state.editDel}
